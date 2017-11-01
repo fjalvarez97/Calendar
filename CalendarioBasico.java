@@ -33,4 +33,31 @@ public class CalendarioBasico
         year = setYear;
     }
     
+    /**
+     * Advances one day in the calendar
+     */
+    public void oneDay()
+    {
+        if (day == 30)
+        {
+            if (month == 12)
+            {
+                // if month is 12, month gets 01 and +1 year
+                day = 01;
+                month = 01;
+                year += 1;
+            }
+            else
+            {
+                // if day is 30 but month isnt 12 month = 01 and +1 z
+                day = 01;
+                month += 1;
+            }
+        }
+        else
+        {
+            day += 1;
+        }
+    }
+    
 }
