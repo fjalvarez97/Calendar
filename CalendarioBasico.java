@@ -49,7 +49,7 @@ public class CalendarioBasico
             }
             else
             {
-                // if day is 30 but month isnt 12 month = 01 and +1 z
+                // if day is 30 but month isnt 12 day = 01 and month +1
                 day = 01;
                 month += 1;
             }
@@ -58,6 +58,32 @@ public class CalendarioBasico
         {
             day += 1;
         }
+    }
+    
+    public String getDate()
+    // Returns the date
+    {
+        String dayStng;
+        String monthStng;
+        String yearStng;
+        String zero;
+        zero = "0";
+        dayStng = String.valueOf(day);
+        monthStng = String.valueOf(month);
+        yearStng = String.valueOf(year);
+        if (dayStng.length() < 2)
+        {
+               dayStng = zero + dayStng;
+        }
+        if (monthStng.length() < 2)
+        {
+               monthStng = zero + monthStng;
+        }
+        if (yearStng.length() < 2)
+        {
+               yearStng = zero + yearStng;
+        }
+        return dayStng + "/" + monthStng + "/" + yearStng;
     }
     
 }
