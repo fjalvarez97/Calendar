@@ -22,4 +22,15 @@ public class CalendarioBasico
         month = 01;
         year = 01;
     }
+    
+    /**
+     * Set a date in the calendar 
+     */
+    public void setDate(int setDay, int setMonth, int setYear)
+    {
+        day = setDay;
+        month = setMonth;
+        year = setYear;
+    }
+    
 }
