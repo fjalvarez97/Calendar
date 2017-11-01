@@ -71,6 +71,7 @@ public class CalendarioBasico
         dayStng = String.valueOf(day);
         monthStng = String.valueOf(month);
         yearStng = String.valueOf(year);
+        yearStng = yearStng.substring(2,4);
         if (dayStng.length() < 2)
         {
                dayStng = zero + dayStng;
@@ -83,7 +84,7 @@ public class CalendarioBasico
         {
                yearStng = zero + yearStng;
         }
-        return dayStng + "/" + monthStng + "/" + yearStng;
+        return dayStng + "-" + monthStng + "-" + yearStng;
     }
     
 }
