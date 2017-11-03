@@ -1,6 +1,6 @@
 /**
  * This is a basic calendar.
- * @Fran √Ålvarez DAM1
+ * @Fran √?lvarez DAM1
  * @1/11/2017 
  */
 public class CalendarioBasico
@@ -26,7 +26,7 @@ public class CalendarioBasico
     /**
      * Set a date in the calendar 
      */
-    public void setDate(int setDay, int setMonth, int setYear)
+    public void fijarFecha(int setDay, int setMonth, int setYear)
     {
         day = setDay;
         month = setMonth;
@@ -36,7 +36,7 @@ public class CalendarioBasico
     /**
      * Advances one day in the calendar
      */
-    public void oneDay()
+    public void avanzarFecha()
     {
         if (day == 30)
         {
@@ -60,7 +60,7 @@ public class CalendarioBasico
         }
     }
     
-    public String getDate()
+    public String obtenerFecha()
     // Returns the date
     {
         String dayStng;
@@ -81,7 +81,7 @@ public class CalendarioBasico
         }
         if (monthStng.length() < 2)
         {
-               monthStng = zero + monthStng;
+               monthStng = "0" + monthStng;
         }
         if (yearStng.length() < 2)
         {
